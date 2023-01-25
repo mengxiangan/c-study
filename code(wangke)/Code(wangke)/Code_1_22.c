@@ -2,11 +2,11 @@
 
 #include<stdio.h>
 
-int main()
-{
-	int age = 10;
-	scanf("%d", &age);
-	printf("%d\n", age);
-	printf("hello world\n");
-	return 0;
-}
+//int main()
+//{
+//	int age = 10;
+//	scanf("%d", &age);
+//	printf("%d\n", age);
+//	printf("hello world\n");
+//	return 0;
+//}
