@@ -9,6 +9,7 @@ void bubble_sort(int arr[], int sz)
 	{
 		//“ªÃÀ√∞≈›≈≈–Ú
 		int j = 0;
+		int flag = 1;
 		for (j = 0; j < sz-1-i; j++) 
 		{
 			if (arr[j] > arr[j + 1])
@@ -17,9 +18,13 @@ void bubble_sort(int arr[], int sz)
 				int tmp = arr[j];
 				arr[j] = arr[j + 1];
 				arr[j + 1] = tmp;
+				flag = 0;
 			}
 		}
-
+		if (flag == 1)
+		{
+			break;
+		}
 	}
 }
 int main()
