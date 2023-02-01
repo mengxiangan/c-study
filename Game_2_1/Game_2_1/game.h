@@ -21,3 +21,10 @@ PlayerMove(char board[ROW][COL], int row, int col);
 
 //电脑下棋
 ComputerMove(char board[ROW][COL], int row, int col);
+
+//判断游戏状态
+//1：* -玩家赢
+//2：# -电脑赢
+//3：Q -平局
+//4：C -游戏继续
+IsWin(char board[ROW][COL], int row, int col);

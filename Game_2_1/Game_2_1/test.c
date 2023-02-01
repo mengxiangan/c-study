@@ -11,6 +11,7 @@ void menu() {
 void game() {
 	//存储数据 - 二维数组
 	char board[ROW][COL];
+	char ret = 0;
 	//初始化棋盘 -初始化空格
 	InitBoard(board, ROW, COL);
 	//打印棋盘 -本质是打印数组的内容
@@ -21,11 +22,25 @@ void game() {
 		//玩家下棋
 		PlayerMove(board, ROW, COL);
 		DisplayBoard(board, ROW, COL);
+		ret =IsWin(board, ROW, COL);
+		if (ret != 'C')
+			break;
 		//电脑下棋
 		ComputerMove(board, ROW, COL);
 		DisplayBoard(board, ROW, COL);
-
+		ret = IsWin(board, ROW, COL);
+		if (ret != 'C')
+			break;
 	}
+	if (ret == '*') {
+		printf("玩家赢得游戏！\n");
+	}else if (ret == '#') {
+		printf("电脑赢得游戏！\n");
+	}
+	else {
+		printf("平局！\n");
+	}
+	DisplayBoard(board, ROW, COL);
 }
 
 int main() {
