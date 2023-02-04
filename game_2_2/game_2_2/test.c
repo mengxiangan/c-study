@@ -8,6 +8,7 @@ void menu() {
 	printf("***************************\n");
 }
 
+
 int main() {
 	int input = 0;
 	do {
